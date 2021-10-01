@@ -49,6 +49,7 @@ html, body{
   border-bottom: 1px solid #ddd;
   background-color: #fff;
   padding: 10px;
+  border-radius: 20px;
 }
 
 .cagr{
@@ -68,4 +69,12 @@ html, body{
   color: #33A5BB;
   background-color: #fff;
   border-color: #33A5BB;
+}
+
+.shadow{
+  border-radius: 25px;
+}
+
+.card{
+  border-radius: 20px;
 }
