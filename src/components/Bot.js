@@ -20,7 +20,7 @@ export default function Bot(props) {
     }
 
     return(
-        <div className="row">
+        <div className="row mb-1">
             <div className="col-md-11 mx-auto shadow p-0">
                 <div className="card">
                     <div className="card-body">

@@ -8,15 +8,16 @@ import BotDetails from "./BotDetails";
 function Menu() {
   const [nav, setNav] = useState('dashboard');
   const count = useSelector(state => state.cart.length);
+  const border = {borderTopLeftRadius: 20, borderTopRightRadius: 20};
 
   return (
     <div className="container mt-4">
-        <ul className="nav nav-tabs">
-          <li className="nav-item">
-              <Link className={`${nav === 'dashboard' ? 'active' : ''} nav-link`} to='/bots' onClick={() => setNav('dashboard')}>Dashboard</Link>
+        <ul className="nav nav-tabs ml-5">
+          <li className="nav-item menu">
+              <Link className={`${nav === 'dashboard' ? 'active' : ''} nav-link`} style={border} to='/bots' onClick={() => setNav('dashboard')}>Dashboard</Link>
           </li>
           <li className="nav-item">
-              <Link className={`${nav === 'cart' ? 'active' : ''} nav-link`} to='/' onClick={() => setNav('dashboard')}>Cart - {count}</Link>
+              <Link className={`${nav === 'cart' ? 'active' : ''} nav-link`} style={border} to='/' onClick={() => setNav('dashboard')}>Cart - {count}</Link>
           </li>
         </ul>
         <div className="tab-content">
