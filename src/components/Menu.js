@@ -8,7 +8,7 @@ import BotDetails from "./BotDetails";
 function Menu() {
   const [nav, setNav] = useState('dashboard');
   const count = useSelector(state => state.cart.length);
-  const border = {borderTopLeftRadius: 20, borderTopRightRadius: 20};
+  const border = {borderTopLeftRadius: 15, borderTopRightRadius: 15};
 
   return (
     <div className="container mt-4">
