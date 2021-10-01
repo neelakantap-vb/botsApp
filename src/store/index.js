@@ -42,8 +42,8 @@ const botsReducer = (state = botsState, action) => {
     }
   }
   else if(action.type === 'addToCart') {
-    // console.log({...state,
-    //   cart:[...state.cart[0], action.payload]});
+    console.log({...state,
+      cart:[...state.cart, action.payload]});
     return {...state,
       cart: [...state.cart, action.payload]};
   }
