@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body{
+  width: 100%;
+}
+.container{
+  max-width: 100%;
+  margin-bottom: 3rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navbar */
+.header{
+  background-color: #e64307f1;
+  padding: 1rem 2rem;
+}
+.navbar-brand{
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.navbar-brand:hover, .nav-link:hover, .cart:hover{
+  color: rgba(255, 255, 255, 0.692);
+}
+.navbar-brand > i{
+  font-size: 2.5rem;
+}
+
+.cart{
+  color: rgb(245, 245, 245);
+  margin-right: 4rem;
+  position: relative;
+  font-size: 2.5rem;
+}
+
+.cart-quantity{
+  position: absolute;
+  height: 1.6rem;
+  width:1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  /* background-color: #4cd137; */
+  color: #ffffff;
+  border-radius: 50%;
+  top:0;
+  left: 1.4em;
+}
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.cagr{
+  color: green;
+}
+
+.nav-link:hover {
+  color: rgb(59, 59, 59);
+}
+
+.risk, .risk:hover{
+  background-color: #33A5BB;
+  border-color: #33A5BB;
+}
+
+.temp, .temp:hover{
+  color: #33A5BB;
+  background-color: #fff;
+  border-color: #33A5BB;
 }
