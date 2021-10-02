@@ -40,13 +40,7 @@ const botsState = {
 
 const botsReducer = (state = botsState, action) => {
 
-  if(action.type === "login") {
-    return {
-      isAuthenticated: true,
-      cart: []
-    }
-  }
-  else if(action.type === 'addToCart') {
+  if(action.type === 'addToCart') {
     return {...state,
       cart: [...state.cart, action.payload],
       cart_quantity: state.cart_quantity+1
