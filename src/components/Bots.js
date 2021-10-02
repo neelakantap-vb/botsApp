@@ -4,7 +4,6 @@ import Bot from './Bot';
 import { useSelector } from 'react-redux';
 
 function Bots() {
-    // const dispatch = useDispatch();
     const bots = useSelector(state => state.bots);
 
     const botList = bots.map(bot => (

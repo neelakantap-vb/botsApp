@@ -1,16 +1,33 @@
-// import { useSelector, useDispatch } from "react-redux";
-// import { getAmount, amountChanged } from "../reducers/RateReducer";
+import React from "react";
+import CartItem from "./CartItem";
 
-// export function AmountField() {
-//   const dispatch = useDispatch();
-//   const amount = useSelector(getAmount);
-//   function onChange(e) {
-//     let newAmount = e.target.value;
-//     dispatch(amountChanged(newAmount));
-//   }
-//   return (
-//     <form className="ExchangeRate-form">
-//       <input type="text" value={amount} onChange={onChange} />
-//     </form>
-//   );
-// }
+import { useSelector } from 'react-redux';
+
+function Cart() {
+    const cart = useSelector(state => state.cart);
+
+    const cartList = cart.map(item => (
+        <CartItem 
+          id = {item.id}
+          key = {item.id}
+          bot = {item.bot}
+          description = {item.description}
+          index_value = {item.index_value}
+          cagr = {item.cagr}
+          quantity = {item.quantity}
+        />
+    ));
+
+
+    return (
+        <div className="container mt-5">
+            {cartList}
+            {cart.length ? 
+                <span></span> :
+                <h1 className='text-center mt-4 mb-4 empty'>Your Cart is Empty</h1>
+            }
+        </div>
+    );
+}
+
+export default Cart;
