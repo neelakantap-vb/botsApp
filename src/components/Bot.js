@@ -8,9 +8,9 @@ export default function Bot(props) {
 
     const botsData = useSelector(state => state.bots);
     const dispatch = useDispatch();
-    const filteredBot = botsData.filter(bots => bots.id == props.id);
+    const filteredBot = botsData.filter(bots => bots.id === props.id);   // ref
     const cartItems = useSelector(state => state.cart);
-    const cartItem = cartItems.filter(item => item.id == props.id);
+    const cartItem = cartItems.filter(item => item.id === props.id);     // ref
     const inCart = cartItem.length >0;
 
     function handleAddToCart() {

@@ -7,19 +7,19 @@ import { incrementQuantity, decrementQuantity, removeFromCart } from "../store";
 export default function CartItem(props) {
     const dispatch = useDispatch();
     var cartItems = useSelector(state => state.cart);
-    const cartItem = cartItems.filter(item => item.id == props.id);
+    const cartItem = cartItems.filter(item => item.id === props.id);       // ref
     const inCart = cartItem.length >0;
     const isEmpty = props.quantity === 0;
 
     function handleDecrement() {
-        if(cartItems[props.id-1].quantity > 0){
-            cartItems[props.id-1].quantity-=1;
+        if(cartItem[0].quantity > 0){
+            cartItem[0].quantity-=1;
             dispatch(decrementQuantity(cartItems));
         }
     }
 
     function handleIncrement() {
-        cartItems[props.id-1].quantity+=1;
+        cartItem[0].quantity+=1;
         dispatch(incrementQuantity(cartItems));
     }
 
