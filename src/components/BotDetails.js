@@ -8,9 +8,9 @@ export default function BotDetails() {
     const params = useParams();
     const dispatch = useDispatch();
     const botsData = useSelector(state => state.bots);
-    const filteredBot = botsData.filter(bots => bots.id == params.id);
+    const filteredBot = botsData.filter(bots => bots.id === parseInt(params.id));
     const cartItems = useSelector(state => state.cart);
-    const cartItem = cartItems.filter(item => item.id == params.id);
+    const cartItem = cartItems.filter(item => item.id === parseInt(params.id));
     const inCart = cartItem.length >0;
     console.log(inCart);
     console.log(cartItem.length);
@@ -25,7 +25,7 @@ export default function BotDetails() {
 
     function handleRemoveFromCart() {
         if(inCart){
-            const newCart = cartItems.filter(item => item.id != params.id);
+            const newCart = cartItems.filter(item => item.id !== parseInt(params.id));
             console.log(newCart);
             dispatch(removeFromCart(newCart, cartItem[0].quantity));
         }
