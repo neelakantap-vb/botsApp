@@ -8,7 +8,6 @@ pipeline {
         stage('test') {
             steps {
                 echo "ran test stage"
-                exit 0
             }
         }
         stage('docker image build/push') { 
