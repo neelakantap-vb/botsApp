@@ -14,8 +14,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 script {
-                    checkout scm
-
+                    
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerHub') {
                         def customImage = docker.build("nbpatilvb/botsApp")
                         customImage.push()
