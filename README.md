@@ -1,3 +1,7 @@
+# Status Screenshot
+
+![status](https://user-images.githubusercontent.com/89968767/138843832-e142713b-ec6c-4d42-8eb7-5baca4e52f08.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
