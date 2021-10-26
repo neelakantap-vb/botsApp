@@ -16,7 +16,7 @@ pipeline {
                 script {
                     
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerHub') {
-                        def customImage = docker.build("nbpatilvb/botsApp")
+                        def customImage = docker.build("nbpatilvb/botsapp")
                         customImage.push()
                     }
                 }
