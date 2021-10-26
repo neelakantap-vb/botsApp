@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                sh 'npm test'
+                sh 'npm test --passWithNoTests'
             }
         }
         stage('docker image build/push') { 
