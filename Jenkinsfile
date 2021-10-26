@@ -13,12 +13,13 @@ pipeline {
         stage('docker image build/push') { 
             steps {
                 sh 'npm install'
-                
-                checkout scm
+                node {
+                    checkout scm
 
-                docker.withRegistry('https://registry.hub.docker.com', 'dockerHub') {
-                    def customImage = docker.build("nbpatilvb/botsApp")
-                    customImage.push()
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerHub') {
+                        def customImage = docker.build("nbpatilvb/botsApp")
+                        customImage.push()
+                    }
                 }
             }
         }
