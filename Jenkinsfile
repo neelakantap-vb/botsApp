@@ -13,7 +13,7 @@ pipeline {
         stage('docker image build/push') { 
             steps {
                 sh 'npm install'
-                node {
+                script {
                     checkout scm
 
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerHub') {
